@@ -85,3 +85,5 @@ C:\Users\harry\test-project\SabotageHelpToolApp\SabotageHelpToolApp\obj\Debug\ne
 C:\Users\harry\test-project\SabotageHelpToolApp\SabotageHelpToolApp\obj\Debug\net6.0\SabotageHelpToolApp.pdb
 C:\Users\harry\test-project\SabotageHelpToolApp\SabotageHelpToolApp\obj\Debug\net6.0\SabotageHelpToolApp.genruntimeconfig.cache
 C:\Users\harry\test-project\SabotageHelpToolApp\SabotageHelpToolApp\obj\Debug\net6.0\ref\SabotageHelpToolApp.dll
+C:\Users\harry\test-project\SabotageHelpToolApp\SabotageHelpToolApp\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\harry\test-project\SabotageHelpToolApp\SabotageHelpToolApp\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
