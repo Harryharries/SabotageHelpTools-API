@@ -3,3 +3,11 @@
 # IDE - VSCode
 **/.vs/
 .vs/*
+.vscode
+.idea
+node_modules
+.DS_Store
+dist
+dist-ssr
+*.local
+.vs
