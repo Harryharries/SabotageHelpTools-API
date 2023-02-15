@@ -23,6 +23,7 @@ namespace SabotageHelpToolApp.Controllers
 
         [HttpGet]
         [ProducesResponseType(200,Type = typeof(IEnumerable<Character>))]
+        [ProducesResponseType(400)]
         public IActionResult GetCharacters() 
         {
             var characters = _mapper.Map<List<CharacterDto>>(_characterRepository.GetCharacters());
@@ -51,6 +52,17 @@ namespace SabotageHelpToolApp.Controllers
                 return BadRequest(ModelState);
             }
             return Ok(character);
+        }
+
+        [HttpGet("turnAction/{characterId}")]
+        [ProducesResponseType(200, Type = typeof(IEnumerable<TurnAction>))]
+        [ProducesResponseType(400)]
+        public IActionResult GetTurnActionsByCharacterId(int characterId)
+        {
+            var turnActions = _mapper.Map<List<TurnActionDto>>(_characterRepository.GetActionByCharacter(characterId));
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            return Ok(turnActions);
         }
     }
 }

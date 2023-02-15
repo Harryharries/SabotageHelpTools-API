@@ -13,3 +13,4 @@ dist
 dist-ssr
 *.local
 .vs
+.bin

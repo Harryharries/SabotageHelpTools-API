@@ -9,6 +9,7 @@ namespace SabotageHelpToolApp.Helper
         public MappingProfiles() 
         {
             CreateMap<Character, CharacterDto>();
+            CreateMap<TurnAction, TurnActionDto>();
         }
     }
 }

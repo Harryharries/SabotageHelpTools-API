@@ -7,6 +7,7 @@ namespace SabotageHelpToolApp.Interfaces
         ICollection<Character> GetCharacters();
         Character GetCharacter(int id);
         Character GetCharacter(string name);
+        ICollection<TurnAction> GetActionByCharacter(int characterId);
 
         bool CharacterExists(int id);
 

@@ -1,4 +1,5 @@
-﻿using SabotageHelpToolApp.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using SabotageHelpToolApp.Data;
 using SabotageHelpToolApp.Interfaces;
 using SabotageHelpToolApp.Models;
 
@@ -15,6 +16,11 @@ namespace SabotageHelpToolApp.Repository
         public bool CharacterExists(int id)
         {
             return _context.Characters.Any(c => c.Id == id);
+        }
+
+        public ICollection<TurnAction> GetActionByCharacter(int characterId)
+        {
+            return _context.CharacterTurnActions.Where(e => e.CharacterId == characterId).Select(c => c.TurnAction).ToList();
         }
 
         public Character GetCharacter(int id)

@@ -29,9 +29,9 @@ namespace SabotageHelpToolApp.Data
             modelBuilder.Entity<CharacterTurnAction>()
                 .HasOne(c => c.Character)
                 .WithMany(ct => ct.CharacterTurnActions)
-                .HasForeignKey(ct => ct.CharacterId);
+                .HasForeignKey(c => c.CharacterId);
             modelBuilder.Entity<CharacterTurnAction>()
-                .HasOne(c => c.TurnAction)
+                .HasOne(t => t.TurnAction)
                 .WithMany(ct => ct.CharacterTurnAction)
                 .HasForeignKey(t => t.TurnActionId);
 
