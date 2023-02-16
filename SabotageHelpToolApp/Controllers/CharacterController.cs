@@ -64,5 +64,16 @@ namespace SabotageHelpToolApp.Controllers
                 return BadRequest(ModelState);
             return Ok(turnActions);
         }
+
+        [HttpGet("skills/{characterId}")]
+        [ProducesResponseType(200, Type = typeof(IEnumerable<Skill>))]
+        [ProducesResponseType(400)]
+        public IActionResult GetSkillsByCharacterId(int characterId)
+        {
+            var turnActions = _mapper.Map<List<SkillDto>>(_characterRepository.GetSkillsByCharacter(characterId));
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            return Ok(turnActions);
+        }
     }
 }

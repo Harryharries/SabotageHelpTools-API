@@ -23,6 +23,11 @@ namespace SabotageHelpToolApp.Repository
             return _context.CharacterTurnActions.Where(e => e.CharacterId == characterId).Select(c => c.TurnAction).ToList();
         }
 
+        public ICollection<Skill> GetSkillsByCharacter(int characterId)
+        {
+            return _context.Characters.Where(e => e.Id == characterId).Select(c => c.Skills).FirstOrDefault();
+        }
+
         public Character GetCharacter(int id)
         {
             return _context.Characters.Where(c => c.Id == id).FirstOrDefault();
