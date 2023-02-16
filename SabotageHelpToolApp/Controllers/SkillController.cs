@@ -12,7 +12,7 @@ namespace SabotageHelpToolApp.Controllers
     public class SkillController : Controller
     {
         private readonly ISkillRepository _skillRepository;
-        private IMapper _mapper;
+        private readonly IMapper _mapper;
 
         public SkillController(ISkillRepository skillRepository, IMapper mapper)
         {
