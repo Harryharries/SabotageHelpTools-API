@@ -3,8 +3,6 @@
 # IDE - VSCode
 **/.vs/
 .vs/*
-**/.bin/
-.bin/*
 .vscode
 .idea
 node_modules
@@ -13,4 +11,7 @@ dist
 dist-ssr
 *.local
 .vs
-.bin
+
+/SabotageHelpToolApp/bin/
+/SabotageHelpToolApp/obj/
+/.vs/
