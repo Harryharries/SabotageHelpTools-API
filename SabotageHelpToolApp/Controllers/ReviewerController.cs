@@ -44,7 +44,7 @@ namespace SabotageHelpToolApp.Controllers
                 return NotFound();
             }
 
-            var review = _reviewerRepository.GetReviewerById(reviewerId);
+            var review = _mapper.Map<ReviewerDetailsDto>(_reviewerRepository.GetReviewerById(reviewerId));
 
             if (!ModelState.IsValid)
             {

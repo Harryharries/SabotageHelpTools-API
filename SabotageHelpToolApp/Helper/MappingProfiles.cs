@@ -14,6 +14,7 @@ namespace SabotageHelpToolApp.Helper
             CreateMap<Skill, SkillDto>();
             CreateMap<Review, ReviewDto>();
             CreateMap<Reviewer, ReviewerDto>();
+            CreateMap<Reviewer, ReviewerDetailsDto>();
         }
     }
 }

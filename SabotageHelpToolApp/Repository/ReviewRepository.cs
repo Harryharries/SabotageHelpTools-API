@@ -33,7 +33,7 @@ namespace SabotageHelpToolApp.Repository
 
         public bool ReviewExists(int id)
         {
-            return _context.Skills.Any(t => t.Id == id);
+            return _context.Reviews.Any(t => t.Id == id);
         }
 
     }
