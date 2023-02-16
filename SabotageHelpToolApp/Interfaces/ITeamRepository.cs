@@ -7,7 +7,7 @@ namespace SabotageHelpToolApp.Interfaces
         ICollection<Team> GetTeams();
         Team GetTeam(int id);
         Team GetTeamByCharacter(int characterId);
-        ICollection<Character> GetCharacterSByTeamId(int teamId);
+        ICollection<Character> GetCharactersByTeamId(int teamId);
 
         bool TeamExists(int id);
 

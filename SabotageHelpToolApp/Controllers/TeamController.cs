@@ -68,6 +68,18 @@ namespace SabotageHelpToolApp.Controllers
             return Ok(team);
         }
 
-/*        [HttpGet("/characters/{teamId}")]*/
+        [HttpGet("/characters/{teamId}")]
+        [ProducesResponseType(200, Type = typeof(Team))]
+        [ProducesResponseType(400)]
+        public IActionResult CharactersByTeamId(int teamId)
+        {
+            var characters = _mapper.Map<List<CharacterDto>>(_teamRepository.GetCharactersByTeamId(teamId));
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            return Ok(characters);
+        }
     }
 }

@@ -16,7 +16,7 @@ namespace SabotageHelpToolApp.Repository
             _mapper = mapper;
 
         }
-        public ICollection<Character> GetCharacterSByTeamId(int teamId)
+        public ICollection<Character> GetCharactersByTeamId(int teamId)
         {
             return _context.Characters.Where(t => t.Team.Id == teamId).ToList();
         }
