@@ -12,6 +12,8 @@ namespace SabotageHelpToolApp.Helper
             CreateMap<TurnAction, TurnActionDto>();
             CreateMap<Team, TeamDto>();
             CreateMap<Skill, SkillDto>();
+            CreateMap<Review, ReviewDto>();
+            CreateMap<Reviewer, ReviewerDto>();
         }
     }
 }
